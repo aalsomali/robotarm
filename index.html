@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: rgb(30, 78, 133);
+            margin-top: 150px;
+        }
+
+        .button {
+            border: none;
+            color: white;
+            padding: 5px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            margin-top: 75px;
+            
+        }
+
+        .button1 {
+            background-color: #008cba;
+            color: white;
+            border: 2px solid #008cba;
+            position: absolute;
+            left: 47%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        .button1:hover {
+            background-color: #c2e9f7;
+            color: black;
+            border: 2px solid #c2e9f7;
+        }
+
+        .button2 {
+            background-color: #008cba;
+            color: white;
+            border: 2px solid #008cba;
+            position: absolute;
+            left: 52.5%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        .button2:hover {
+            background-color: #c2e9f7;
+            color: black;
+            border: 2px solid #c2e9f7;
+        }
+
+        .sliderContainer {
+            width: 100%;
+        }
+
+        .slider {
+            -webkit-appearance: none;
+            width: 27.5%;
+            height: 20px;
+            background: #d3d3d3;
+        }
+
+        .slider:hover {
+            opacity: 1;
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 25px;
+            height: 25px;
+            background: #008cba;
+            cursor: pointer;
+        }
+
+        div {
+            color: white;
+            font-size: large;
+            position: relative;
+            left: 33%;
+        }
+
+        h1 {
+            color: white;
+            margin-bottom: 42.5px;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>
+        <center><b>Robot Arm Control Panel</b></center>
+    </h1>
+    <div class="slideContainer">
+            Engine 1 <input type="range" min="0" max="180" value="0" id="myRange" class="slider">
+            <span id="demo"></span>
+            <p></p>
+            Engine 2 <input type="range" min="0" max="180" value="0" id="myRange2" class="slider">
+            <span id="demo2"></span>
+            <p></p>
+            Engine 3 <input type="range" min="0" max="180" value="0" id="myRange3" class="slider">
+            <span id="demo3"></span>
+            <p></p>
+            Engine 4 <input type="range" min="0" max="180" value="0" id="myRange4" class="slider">
+            <span id="demo4"></span>
+            <p></p>
+            Engine 5 <input type="range" min="0" max="180" value="0" id="myRange5" class="slider">
+            <span id="demo5"></span>
+            <p></p>
+            Engine 6 <input type="range" min="0" max="180" value="0" id="myRange6" class="slider">
+            <span id="demo6"></span>
+    </div>
+    <script>
+        var slider = document.getElementById("myRange");
+        var slider2 = document.getElementById("myRange2");
+        var slider3 = document.getElementById("myRange3");
+        var slider4 = document.getElementById("myRange4");
+        var slider5 = document.getElementById("myRange5");
+        var slider6 = document.getElementById("myRange6");
+
+        var output = document.getElementById("demo");
+        var output2 = document.getElementById("demo2");
+        var output3 = document.getElementById("demo3");
+        var output4 = document.getElementById("demo4");
+        var output5 = document.getElementById("demo5");
+        var output6 = document.getElementById("demo6");
+
+        output.innerHTML = slider.value;
+        output2.innerHTML = slider2.value;
+        output3.innerHTML = slider3.value;
+        output4.innerHTML = slider4.value;
+        output5.innerHTML = slider5.value;
+        output6.innerHTML = slider6.value;
+
+        slider.oninput = function () {
+            output.innerHTML = this.value;
+        }
+        slider2.oninput = function () {
+            output2.innerHTML = this.value;
+        }
+        slider3.oninput = function () {
+            output3.innerHTML = this.value;
+        }
+        slider4.oninput = function () {
+            output4.innerHTML = this.value;
+        }
+        slider5.oninput = function () {
+            output5.innerHTML = this.value;
+        }
+        slider6.oninput = function () {
+            output6.innerHTML = this.value;
+        }
+
+    </script>
+    <button class="button button1">Save</button>
+    <button class="button button2">Start</button>
+</body>
+
+</html>
