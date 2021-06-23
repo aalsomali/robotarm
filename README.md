@@ -26,7 +26,7 @@ It contains HTML, CSS, Javascript, Mysql, and php.
 
 - designing the HTML page
 
-- creating the database
+- creating the database [Link: https://github.com/aalsomali/robotarm/issues/1#issue-928361359]
 
 [Issues]
 
